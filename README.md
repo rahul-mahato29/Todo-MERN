@@ -1,6 +1,6 @@
-## React Project — Todo Application
-
 # Building a MERN Stack Todo Application with Zod
+
+# React Project — Todo Application
 
 ## 1. **Environment Setup**
 
