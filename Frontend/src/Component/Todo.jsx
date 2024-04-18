@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoContent from "./TodoContent";
 
 //Todo Component
@@ -30,12 +30,15 @@ const Todo = () => {
     const [todo, setTodo] = useState([]);
 
     //connecting with backend (Reading all the todos from database)
-    fetch("http://localhost:3000/todo/read").then(
-        async function(res){
-            const jsonData = await res.json();
-            setTodo(jsonData.Todo);
-        }
-    )
+    useEffect(() => {
+        fetch("http://localhost:3000/todo/read").then(
+            async function(res){
+                const jsonData = await res.json();
+                setTodo(jsonData.Todo);
+            }
+        )
+        console.log("running")
+    }, [])  //if the second parameter of useEffect is empty, means it will only render trigger the logic inside it once.
 
     return (
         <div>
@@ -50,7 +53,7 @@ const Todo = () => {
 
             </div>
             <div className="flex justify-center">
-                <TodoContent todo = {todo} />
+                <TodoContent todo = {todo} update={setTodo} />
             </div>
         </div>
     );

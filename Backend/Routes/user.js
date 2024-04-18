@@ -67,10 +67,11 @@ router.post('/update',async (req, res) => {
 
 //deleting todo
 router.post('/delete',async (req, res) => {
-    const deleteTodo = req.headers.title;
+    const deleteTodo = req.body.title;
 
     try{
-        await Todo.deleteOne({title: deleteTodo});
+        const a = await Todo.deleteOne({title: deleteTodo});
+        console.log("delete" , a);
     }
     catch(e){
         return res.json({
