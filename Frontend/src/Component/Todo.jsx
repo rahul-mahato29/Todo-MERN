@@ -9,6 +9,13 @@ const Todo = () => {
 
     //updating the database with todo details
     function submitDetails(){
+
+        //invalid input
+        if(!title || !description){
+            alert("Please Provide both title and description");
+            return;
+        }
+
         //use can also use "axios", its syntax is little easy
         fetch("http://localhost:3000/todo/create", {
             method: "POST",
@@ -50,8 +57,8 @@ const Todo = () => {
                     <input type="text" name="description" onChange={(e) => setDescription(e.target.value)}></input><br />
                     <button className="bg-gray-400 p-1 pl-2 pr-2 m-1 rounded-md hover:bg-gray-500 font-semibold" onClick={submitDetails}>Submit</button>
                 </form>
-
             </div>
+
             <div className="flex justify-center">
                 <TodoContent todo = {todo} update={setTodo} />
             </div>
