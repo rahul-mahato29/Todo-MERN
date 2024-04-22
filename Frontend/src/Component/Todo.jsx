@@ -51,7 +51,7 @@ const Todo = () => {
         <div>
             <div className="flex justify-center">
                 <form action="" className="border-2 border-black p-3">
-                    <lable className="font-semibold">Title : </lable>
+                    <lable className="font-semibold">Task : </lable>
                     <input type="text" name="title" onChange={(e) => setTitle(e.target.value)}></input><br /><br />
                     <lable className="font-semibold">Description : </lable>
                     <input type="text" name="description" onChange={(e) => setDescription(e.target.value)}></input><br />

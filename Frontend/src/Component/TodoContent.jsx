@@ -33,23 +33,23 @@ const TodoContent = ({ todo, update }) => {
     return (
         <div>
             {todo.map((info) => {
-            {editClick ? console.log("YES") : console.log("NO")}
-                if(editClick){
+                { editClick ? console.log("YES") : console.log("NO") }
+                if (editClick) {
                     return <div className="border-2 border-black p-2 m-2 w-64">
-                    <h2><span className="font-semibold">Title : </span>{info.title}</h2>
-                    {/* <input type="text" className="text" value={editTitle} onChange={(e) => handleEditedTitle(e.target.value)} /> */}
-                    <h2><span className="font-semibold">Description : </span>{info.description}</h2>
-                    {/* <textarea cols="23" rows="2" value={editDescription} onChange={(e) => handleEditedDesc(e.target.value)}></textarea> */}
-                    <button className="bg-green-400 p-1 pl-2 pr-2 m-1 rounded-md hover:bg-green-500 font-semibold" onClick={handleUpdateTodo}>Update</button>
+                        <h2><span className="font-semibold">Title : </span>{info.title}</h2>
+                        {/* <input type="text" className="text" value={editTitle} onChange={(e) => handleEditedTitle(e.target.value)} /> */}
+                        <h2><span className="font-semibold">Description : </span>{info.description}</h2>
+                        {/* <textarea cols="23" rows="2" value={editDescription} onChange={(e) => handleEditedDesc(e.target.value)}></textarea> */}
+                        <button className="bg-green-400 p-1 pl-2 pr-2 m-1 rounded-md hover:bg-green-500 font-semibold" onClick={handleUpdateTodo}>Update</button>
                     </div>
                 }
-                else{
+                else {
                     return <div className="border-2 border-black p-2 m-2 w-64">
-                    <h2><span className="font-semibold">Title : </span>{info.title}</h2>
-                    <h2><span className="font-semibold">Description : </span>{info.description}</h2>
-                    <button className="bg-orange-400 p-1 pl-2 pr-2 m-1 rounded-md hover:bg-orange-500 font-semibold" onClick={() => setEditClick(true)}>Edit</button>
-                    <button className="bg-red-400 p-1 pl-2 pr-2 m-1 rounded-md hover:bg-red-500 font-semibold" onClick={() => handleDelete(info.title)}>Delete</button>
-                </div>
+                        <h2><span className="font-semibold">Title : </span>{info.title}</h2>
+                        <h2><span className="font-semibold">Description : </span>{info.description}</h2>
+                        <button className="bg-orange-400 p-1 pl-2 pr-2 m-1 rounded-md hover:bg-orange-500 font-semibold" onClick={() => setEditClick(true)}>Edit</button>
+                        <button className="bg-red-400 p-1 pl-2 pr-2 m-1 rounded-md hover:bg-red-500 font-semibold" onClick={() => handleDelete(info.title)}>Delete</button>
+                    </div>
                 }
             })}
         </div>
