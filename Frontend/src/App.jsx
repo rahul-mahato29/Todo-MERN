@@ -1,6 +1,9 @@
 import './App.css'
 import Todo from './Component/Todo';
 import Home from './Pages/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Profile from './Pages/Profile';
+import Navbar from './Component/Navbar';
 
 function App() {
 
@@ -11,11 +14,11 @@ function App() {
     //       <Todo />
     //     </div>
     // </div>
-    
+
     <>
-      <Home />
-      {/* <Alltasks /> */}
-      {/* <Profile/> */}
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
     </>
   )
 }

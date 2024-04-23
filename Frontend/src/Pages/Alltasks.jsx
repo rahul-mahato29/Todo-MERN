@@ -1,8 +1,8 @@
 const Alltasks = () => {
     return (
-        <>
-            All Tasks
-        </>
+        <div className="bg-white h-full rounded-2xl">
+            Content Coming Soon...
+        </div>
     )
 }
 
