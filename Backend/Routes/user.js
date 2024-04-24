@@ -11,13 +11,13 @@ router.post('/create',async (req, res) => {
     const title = req.body.title;
     const description = req.body.description;
     const completed = req.body.completed;
-
+    
     await Todo.create({
         title: title,
         description: description,
         completed: completed
     })
-
+    
     res.json({
         msg: "Todo Created!!"
     })
@@ -67,7 +67,9 @@ router.post('/update',async (req, res) => {
 
 //deleting todo
 router.post('/delete',async (req, res) => {
+    console.log("delete");
     const deleteTodo = req.body.title;
+    console.log("Delete : ", deleteTodo);
 
     try{
         const a = await Todo.deleteOne({title: deleteTodo});

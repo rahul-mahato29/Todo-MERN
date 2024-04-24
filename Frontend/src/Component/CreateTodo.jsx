@@ -3,7 +3,6 @@ import Todolist from "./Todolist";
 import axios from 'axios';
 
 const CreateTodo = () => {
-
     const [taskAdd, setTaskAdd] = useState("");
     const [taskRead, setTaskRead] = useState([]);
 
@@ -42,7 +41,7 @@ const CreateTodo = () => {
             .catch(function (error) {
                 console.log(error);
             })
-    }, [taskRead])
+    }, [])
 
     return (
         <div className="h-full">
@@ -63,7 +62,7 @@ const CreateTodo = () => {
                 </div>
             </div>
 
-            <div className="mt-10 p-1">
+            <div className="mt-10 p-1 flex flex-col-reverse">
                 {taskRead.Todo && taskRead.Todo.map((txt, index) => (
                     <Todolist key={index} icon={"🟠"} task={txt.title} time={"2:30 pm"} />
                 ))}

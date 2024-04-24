@@ -11,7 +11,7 @@ const Home = () => {
                 <Navbar />
                 <div className="border-2 border-l-0 border-white rounded-r-lg w-full bg-violet-400 p-20 pt-10 pb-10">
                     <Routes>
-                        <Route path="/createtodo" element={<CreateTodo/>} />
+                        <Route path="/" element={<CreateTodo/>} /> 
                         <Route path="/alltask" element={<Alltasks/>} />
                         <Route path="/setting" element={<Profile/>} />
                     </Routes>

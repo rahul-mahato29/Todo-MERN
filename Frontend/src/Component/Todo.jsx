@@ -9,7 +9,6 @@ const Todo = () => {
 
     //updating the database with todo details
     function submitDetails(){
-
         //invalid input
         if(!title || !description){
             alert("Please Provide both title and description");
@@ -35,7 +34,6 @@ const Todo = () => {
 
 
     const [todo, setTodo] = useState([]);
-
     //connecting with backend (Reading all the todos from database)
     useEffect(() => {
         fetch("http://localhost:3000/todo/read").then(

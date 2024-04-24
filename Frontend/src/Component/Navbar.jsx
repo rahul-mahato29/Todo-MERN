@@ -18,7 +18,7 @@ const Navbar = () => {
                             if (info.isActive) {
                                 return 'text-violet-400'
                             }
-                        }} to='/createtodo'>
+                        }} to='/'>
                             <div className="text-lg font-semibold cursor-pointer">Today Tasks</div>
                         </NavLink>
                     </div>
